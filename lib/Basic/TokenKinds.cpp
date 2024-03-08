@@ -1,4 +1,4 @@
-#include "../../include/tinylang/Basic/TokenKinds.h"
+#include "tinylang/Basic/TokenKinds.h"
 #include "llvm/Support/ErrorHandling.h"
 
 using namespace tinylang;
@@ -6,7 +6,7 @@ using namespace tinylang;
 static const char *const TokNames[] = {
 #define TOK(ID) #ID,
 #define KEYWORD(ID, FLAG) #ID,
-#include "../../include/tinylang/Basic/TokenKinds.def"
+#include "tinylang/Basic/TokenKinds.def"
     nullptr};
 
 const char *tok::getTokenName(TokenKind Kind) {
@@ -23,7 +23,7 @@ const char *tok::getPunctuatorSpelling(TokenKind Kind) {
 #define PUNCTUATOR(ID, SP)                                 \
   case ID:                                                 \
     return SP;
-#include "../../include/tinylang/Basic/TokenKinds.def"
+#include "tinylang/Basic/TokenKinds.def"
   default:
     break;
   }
@@ -36,7 +36,7 @@ const char *tok::getKeywordsSpelling(TokenKind Kind) {
 #define KEYWORD(ID, FLAG)                                  \
   case kw_##ID:                                            \
     return #ID;
-#include "../../include/tinylang/Basic/TokenKinds.def"
+#include "tinylang/Basic/TokenKinds.def"
   default:
     break;
   }

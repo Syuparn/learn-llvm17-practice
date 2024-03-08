@@ -1,4 +1,4 @@
-#include "../../include/tinylang/Lexer/Lexer.h"
+#include "tinylang/Lexer/Lexer.h"
 
 using namespace tinylang;
 
@@ -10,7 +10,7 @@ void KeywordFilter::addKeyword(llvm::StringRef Keyword,
 void KeywordFilter::addKeywords() {
 #define KEYWORD(NAME, FLAGS)                               \
   addKeyword(llvm::StringRef(#NAME), tok::kw_##NAME);
-#include "../../include/tinylang/Basic/TokenKinds.def"
+#include "tinylang/Basic/TokenKinds.def"
 }
 
 namespace charinfo {

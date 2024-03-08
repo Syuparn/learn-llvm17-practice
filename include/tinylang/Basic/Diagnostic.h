@@ -1,11 +1,9 @@
 #ifndef TINYLANG_BASIC_DIAGNOSTIC_H
 #define TINYLANG_BASIC_DIAGNOSTIC_H
 
-#include "llvm/ADT/StringRef.h"
 #include "llvm/Support/FormatVariadic.h"
 #include "llvm/Support/SMLoc.h"
 #include "llvm/Support/SourceMgr.h"
-#include "llvm/Support/raw_ostream.h"
 #include <utility>
 
 namespace tinylang {

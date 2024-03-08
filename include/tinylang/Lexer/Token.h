@@ -1,7 +1,7 @@
 #ifndef TINYLANG_LEXER_TOKEN_H
 #define TINYLANG_LEXER_TOKEN_H
 
-#include "../Basic/TokenKinds.h"
+#include "tinylang/Basic/TokenKinds.h"
 #include "llvm/ADT/StringRef.h"
 #include "llvm/Support/SMLoc.h"
 #include <cassert>

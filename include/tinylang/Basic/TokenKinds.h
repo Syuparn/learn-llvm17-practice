@@ -5,7 +5,7 @@ namespace tinylang {
 namespace tok {
 enum TokenKind : unsigned short {
 #define TOK(ID) ID,
-#include "./TokenKinds.def"
+#include "TokenKinds.def"
   NUM_TOKENS
 };
 

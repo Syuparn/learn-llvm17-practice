@@ -3,6 +3,14 @@ practice for the book "Learn LLVM 17" https://www.packtpub.com/en-sk/product/lea
 
 Original repo: https://github.com/PacktPublishing/Learn-LLVM-17/tree/main
 
+# build
+
+```bash
+# change DLLVM_DIR if not found
+cmake -GNinja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DLLVM_DIR=/usr/local/bin ./
+ninja
+```
+
 # format
 
 - use `clang-format`

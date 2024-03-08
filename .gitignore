@@ -1,0 +1,9 @@
+# build files
+CMakeFiles/
+build.ninja
+.ninja_log
+.ninja_deps
+cmake_install.cmake
+
+*.a
+*.inc
