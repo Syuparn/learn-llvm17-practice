@@ -11,6 +11,12 @@ cmake -GNinja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DLLVM_DIR=/
 ninja
 ```
 
+# Run
+
+```bash
+./tools/driver/tinylang Gcd.mod
+```
+
 # format
 
 - use `clang-format`

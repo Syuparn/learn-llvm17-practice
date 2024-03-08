@@ -11,7 +11,7 @@ enum TokenKind : unsigned short {
 
 const char *getTokenName(TokenKind Kind);
 const char *getPunctuatorSpelling(TokenKind Kind);
-const char *getKeywordsSpelling(TokenKind Kind);
+const char *getKeywordSpelling(TokenKind Kind);
 } // namespace tok
 } // namespace tinylang
 

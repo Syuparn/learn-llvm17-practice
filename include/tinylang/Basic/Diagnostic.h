@@ -4,7 +4,7 @@
 #include "llvm/Support/FormatVariadic.h"
 #include "llvm/Support/SMLoc.h"
 #include "llvm/Support/SourceMgr.h"
-#include <utility>
+#include <llvm/Support/raw_ostream.h>
 
 namespace tinylang {
 namespace diag {

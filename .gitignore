@@ -7,3 +7,5 @@ cmake_install.cmake
 
 *.a
 *.inc
+
+tools/driver/tinylang

@@ -1,7 +1,6 @@
 #include "tinylang/Basic/Diagnostic.h"
 #include "tinylang/Basic/Version.h"
-#include "tinylang/Lexer/Lexer.h"
-// #include "tinylang/Parser/Parser.h"
+#include "tinylang/Parser/Parser.h"
 #include "llvm/Support/InitLLVM.h"
 #include "llvm/Support/raw_ostream.h"
 
@@ -34,8 +33,8 @@ int main(int argc_, const char **argv_) {
                               llvm::SMLoc());
 
     auto TheLexer = Lexer(SrcMgr, Diags);
-    // auto TheSema = Sema(Diags);
-    // auto TheParser = Parser(TheLexer, TheSema);
-    // TheParser.parse();
+    auto TheSema = Sema(Diags);
+    auto TheParser = Parser(TheLexer, TheSema);
+    TheParser.parse();
   }
 }

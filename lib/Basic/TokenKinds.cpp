@@ -31,7 +31,7 @@ const char *tok::getPunctuatorSpelling(TokenKind Kind) {
   return nullptr;
 }
 
-const char *tok::getKeywordsSpelling(TokenKind Kind) {
+const char *tok::getKeywordSpelling(TokenKind Kind) {
   switch (Kind) {
 #define KEYWORD(ID, FLAG)                                  \
   case kw_##ID:                                            \
