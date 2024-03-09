@@ -14,7 +14,8 @@ ninja
 # Run
 
 ```bash
-./tools/driver/tinylang Gcd.mod
+./tools/driver/tinylang --filetype=obj ./example/Gcd.mod
+./tools/driver/tinylang --filetype=asm -emit-llvm -o - ./example/Gcd.mod
 ```
 
 # format

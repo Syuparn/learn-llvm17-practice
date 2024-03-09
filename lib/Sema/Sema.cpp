@@ -100,8 +100,8 @@ void Sema::actOnModuleDeclaration(
 
 void Sema::actOnImport(llvm::StringRef ModuleName,
                        IdentList &Ids) {
-  Diags.report(llvm::SMLoc(),
-               diag::err_not_yet_implemented);
+  Diags.report(llvm::SMLoc(), diag::err_not_yet_implemented,
+               "module imports");
 }
 
 void Sema::actOnConstantDeclaration(DeclList &Decls,
@@ -204,8 +204,18 @@ void Sema::actOnAssignment(StmtList &Stmts, llvm::SMLoc Loc,
           tok::getPunctuatorSpelling(tok::colonequal));
     }
     Stmts.push_back(new AssignmentStatement(Var, E));
+  } else if (auto *FP =
+                 llvm::dyn_cast<FormalParameterDeclaration>(
+                     D)) {
+    if (FP->getType() != E->getType()) {
+      Diags.report(
+          Loc, diag::err_types_for_operator_not_compatible,
+          tok::getPunctuatorSpelling(tok::colonequal));
+    }
+    Stmts.push_back(new AssignmentStatement(FP, E));
   } else if (D) {
-    // TODO Emit error
+    Diags.report(Loc, diag::err_not_yet_implemented,
+                 "other assignments");
   }
 }
 
